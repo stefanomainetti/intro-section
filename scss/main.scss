@@ -1,0 +1,16 @@
+//1. Config files and helpers
+@use "abstracts/colors";
+@use "abstracts/type";
+
+//2. Vendor
+@use "vendor/normalize";
+
+// 3. Base styles
+
+@use "base/base";
+
+// 4. Layout
+
+// 5. Components
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700;900&display=swap");
