@@ -13,15 +13,111 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
-    Features Company Careers About Login Register Make remote work Get your team
-    in sync, no matter your location. Streamline processes, create team rituals,
-    and watch productivity soar. Learn more
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <!-- Header
+      ####################-->
+    <header class="main-header">
+      <div class="logo"><img src="/img/logo.svg" alt="Snap logo" /></div>
+      <img src="/img/icon-menu.svg" alt="icon menu" />
+      <img src="/img/icon-close-menu.svg" alt="" />
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="#">Features</a>
+            <img src="/img/icon-arrow-up.svg" alt="icon arrow up" />
+            <img src="/img/icon-arrow-down.svg" alt="icon arrow down" />
+            <ul class="nav-list nav--drowpdown">
+              <li>
+                <a href="#"
+                  ><img src="/img/icon-todo.svg" alt="icon todo" />Todo List</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/img/icon-calendar.svg"
+                    alt="icon calendar"
+                  />Calendar</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/img/icon-reminders.svg"
+                    alt="icon reminders"
+                  />Reminders</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/img/icon-planning.svg" alt="" />Planning</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Company</a>
+            <img src="/img/icon-arrow-up.svg" alt="icon arrow up" />
+            <img src="/img/icon-arrow-down.svg" alt="icon arrow down" />
+            <ul class="nav-list nav--drowpdown">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary" href="">Login</a>
+      <a class="btn btn--primary btn--border" href="">Register</a>
+    </header>
+    <!-- Hero section
+      #################### -->
+    <section class="hero">
+      <div class="hero-image-mobile">
+        <img src="/img/image-hero-mobile.png" alt="hero mobile" />
+      </div>
+      <div class="container grid">
+        <div class="hero-text">
+          <h1 class="title-large">Make remote work</h1>
+          <p class="intro">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a href="#" class="btn btn--secondary">Learn more</a>
+        </div>
+        <div class="hero-image-desktop">
+          <img src="/img/image-hero-desktop.png" alt="hero desktop" />
+        </div>
+      </div>
+    </section>
+    <!-- Footer
+      #################### -->
+    <footer>
+      <div class="container">
+        <ul class="unstyled-list client-link">
+          <li>
+            <a href="#"><img src="/img/client-databiz.svg" alt="databiz" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/img/client-audiophile.svg" alt="audiophile"
+            /></a>
+          </li>
+          <li>
+            <a href="#"><img src="/img/client-meet.svg" alt="meet" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="/img/client-maker.svg" alt="maker" /></a>
+          </li>
+        </ul>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Stefano Mainetti</a>.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

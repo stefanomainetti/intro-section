@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -7,8 +7,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  font-family: "Overpass", sans-serif;
-  font-weight: 300;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
   line-height: 1.6;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -344,6 +344,10 @@ template {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+p {
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */
