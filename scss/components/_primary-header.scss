@@ -125,20 +125,23 @@
   }
 }
 
-li[aria-expanded="true"] .dropdown-toggle {
-  background-image: url("/img/icon-arrow-up-black.svg");
+li[aria-expanded="true"] {
+  .dropdown-toggle {
+    background-image: url("/img/icon-arrow-up-black.svg");
+  }
+  > a {
+    color: black;
+  }
 }
 
-li[aria-expanded="true"] > a {
-  color: black;
-}
+li[aria-expanded="false"]:hover {
+  > .dropdown-toggle {
+    background-image: url("/img/icon-arrow-down-black.svg");
+  }
 
-li[aria-expanded="false"]:hover > .dropdown-toggle {
-  background-image: url("/img/icon-arrow-down-black.svg");
-}
-
-li[aria-expanded="false"]:hover > a {
-  color: black;
+  > a {
+    color: black;
+  }
 }
 
 .nav-dropdown {
