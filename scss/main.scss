@@ -11,6 +11,10 @@
 
 // 4. Layout
 
+@use "layout/layout";
+
 // 5. Components
+
+@use "components/primary-header";
 
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");

@@ -1,9 +1,33 @@
+@use "../abstracts/colors";
+@use "../abstracts/type";
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 p {
   font-size: 18px;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: colors.$almost-white;
+}
+
+.btn-border {
+  border: 2px solid colors.$text-base;
+  border-radius: 0.9rem;
+}
+
+li {
+  color: colors.$medium-gray !important;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: black !important;
 }

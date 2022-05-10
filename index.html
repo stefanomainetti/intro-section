@@ -7,78 +7,110 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="img/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/main.css" />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <script src="js/nav.js" defer></script>
   </head>
   <body>
     <!-- Header
       ####################-->
-    <header class="main-header">
+    <header class="primary-header flex">
       <div class="logo"><img src="/img/logo.svg" alt="Snap logo" /></div>
-      <div class="nav-toggler">
-        <img src="/img/icon-menu.svg" alt="icon menu" />
-        <img src="/img/icon-close-menu.svg" alt="" />
-      </div>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li>
-            <a href="#">Features</a>
-            <img src="/img/icon-arrow-up.svg" alt="icon arrow up" />
-            <img src="/img/icon-arrow-down.svg" alt="icon arrow down" />
-            <ul class="nav-list nav--drowpdown">
-              <li>
-                <a href="#"
-                  ><img src="/img/icon-todo.svg" alt="icon todo" />Todo List</a
+      <button
+        type="button"
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav class="nav-container">
+        <div id="backdrop" class="backdrop" data-backdrop="false">
+          <div
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <ul class="nav-list flex">
+              <li
+                id="features-dropdown-toggle"
+                aria-controls="features-dropdown"
+                aria-expanded="false"
+              >
+                <a href="#">Features</a>
+                <button type="button" class="dropdown-toggle">
+                  <span class="sr-only">Sub Menu</span>
+                </button>
+                <ul
+                  id="features-dropdown"
+                  data-visible="false"
+                  class="nav-dropdown flex"
                 >
+                  <li>
+                    <a href="#"
+                      ><img src="/img/icon-todo.svg" alt="icon todo" />Todo
+                      List</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="/img/icon-calendar.svg"
+                        alt="icon calendar"
+                      />Calendar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="/img/icon-reminders.svg"
+                        alt="icon reminders"
+                      />Reminders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="/img/icon-planning.svg" alt="" />Planning</a
+                    >
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="/img/icon-calendar.svg"
-                    alt="icon calendar"
-                  />Calendar</a
+              <li
+                id="company-dropdown-toggle"
+                aria-controls="company-dropdown"
+                aria-expanded="false"
+              >
+                <a href="#">Company</a>
+                <button type="button" class="dropdown-toggle">
+                  <span class="sr-only">Sub Menu</span>
+                </button>
+                <ul
+                  id="company-dropdown"
+                  data-visible="false"
+                  class="nav-dropdown flex"
                 >
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
               </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="/img/icon-reminders.svg"
-                    alt="icon reminders"
-                  />Reminders</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="/img/icon-planning.svg" alt="" />Planning</a
-                >
-              </li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">About</a></li>
             </ul>
-          </li>
-          <li>
-            <a href="">Company</a>
-            <img src="/img/icon-arrow-up.svg" alt="icon arrow up" />
-            <img src="/img/icon-arrow-down.svg" alt="icon arrow down" />
-            <ul class="nav-list nav--drowpdown">
-              <li><a href="#">History</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
+            <div class="sign-in flex">
+              <a href="#">Login</a>
+              <a href="#" class="btn-border">Register</a>
+            </div>
+          </div>
+        </div>
       </nav>
-      <a class="btn btn--primary" href="">Login</a>
-      <a class="btn btn--primary btn--border" href="">Register</a>
     </header>
     <!-- Hero section
       #################### -->
     <section class="hero">
-      <div class="hero-image-mobile">
-        <img src="/img/image-hero-mobile.png" alt="hero mobile" />
-      </div>
+      <div class="hero-image-mobile"></div>
       <div class="container grid">
         <div class="hero-text">
           <h1 class="title-large">Make remote work</h1>
@@ -88,9 +120,7 @@
           </p>
           <a href="#" class="btn btn--secondary">Learn more</a>
         </div>
-        <div class="hero-image-desktop">
-          <img src="/img/image-hero-desktop.png" alt="hero desktop" />
-        </div>
+        <div class="hero-image-desktop"></div>
       </div>
     </section>
     <!-- Footer
