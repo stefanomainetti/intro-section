@@ -3,6 +3,7 @@
 
 .primary-header {
   margin: 0;
+  width: 100%;
   align-items: center;
   @media (min-width: layout.$media-min) {
     gap: 3rem;
@@ -17,13 +18,15 @@
     padding-top: 0.5rem;
   }
   @media (min-width: layout.$media-min) {
-    margin-left: 2rem;
+    margin-left: 2.5rem;
+    margin-top: 1.2rem;
   }
 }
 
 .nav-container {
   @media (min-width: layout.$media-min) {
     flex-grow: 1;
+    padding-top: 0.5rem;
   }
 }
 
@@ -51,13 +54,13 @@
 
 .backdrop {
   position: fixed;
-  z-index: 9000;
+  z-index: 1000;
   left: 0;
   top: 0%;
   width: 100%;
   height: 100%;
-  background-color: hsl(0 0 0 / 0);
-  transition: background-color 350ms ease-in-out;
+  background-color: transparent;
+  transition: background-color 350ms, z-index 350ms;
   @media (min-width: layout.$media-min) {
     position: relative;
     transition: none;
@@ -72,15 +75,15 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: hsl(0 0 0 / 0.7);
+  background-color: hsl(0 0% 0% / 0.7);
   @media (min-width: layout.$media-min) {
-    background-color: hsl(0 0 0 / 0);
+    background-color: hsl(0 0% 0% / 0);
     transition: none;
   }
 }
 
 .primary-navigation {
-  z-index: 1000;
+  z-index: 2000;
   background-color: colors.$almost-white;
   margin: 0;
   transform: translateX(100%);
@@ -121,7 +124,7 @@
   aspect-ratio: 1;
   @media (min-width: layout.$media-min) {
     position: relative;
-    margin: 0 0 0 0.8rem;
+    margin: 0 0 0 0.2rem;
   }
 }
 
@@ -147,6 +150,7 @@ li[aria-expanded="false"]:hover {
 .nav-dropdown {
   list-style: none;
   flex-direction: column;
+  z-index: 3000 !important;
   max-height: 0px;
   overflow: hidden;
   padding-inline: 1.5rem;
@@ -170,9 +174,13 @@ li[aria-expanded="false"]:hover {
     position: absolute;
     background-color: white;
     border-radius: 1rem;
-    box-shadow: 0 0 3rem hsl(0 0 0 / 0.2);
+    box-shadow: 0 0 3rem hsl(0 0% 0% / 0.2);
     inset: 3.5rem 0 auto auto;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
+    gap: 0.5rem;
+    li > a > img {
+      width: 2rem;
+    }
   }
 }
 
@@ -201,7 +209,10 @@ li[aria-expanded="false"]:hover {
   }
   @media (min-width: layout.$media-min) {
     flex-direction: row;
-    gap: 2rem;
+    gap: 2.2rem;
+    li {
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -222,10 +233,10 @@ li[aria-expanded="false"]:hover {
   }
   @media (min-width: layout.$media-min) {
     flex-direction: row;
-    gap: 1rem;
-    margin-right: 2rem;
+    gap: 1.3rem;
+    margin-right: 2.5rem;
     a {
-      padding-inline: 1.5rem;
+      padding-inline: 1.2rem;
     }
   }
 }

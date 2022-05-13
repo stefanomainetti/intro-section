@@ -1,0 +1,155 @@
+@use "../abstracts/colors";
+@use "../layout/layout";
+
+.hero-image-mobile {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 1.33;
+  background: url("/img/image-hero-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 0.5rem;
+  @media (min-width: layout.$media-min) {
+    display: none;
+  }
+}
+
+.title-large {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0rem;
+  @media (min-width: layout.$media-min) {
+    font-size: min(6vw, 5rem);
+    text-align: left;
+    line-height: 1em;
+    padding: 0;
+    margin-top: 10rem;
+    > span {
+      display: block;
+    }
+  }
+}
+
+.intro {
+  text-align: center;
+  color: colors.$text-base;
+  font-size: 1rem;
+  margin: 0.5rem max(4vw, 1rem);
+  @media (min-width: layout.$media-min) {
+    width: 30vw;
+    text-align: justify;
+    margin: 0;
+    margin-top: 3rem;
+    font-size: min(1.3vw, 1.1rem);
+  }
+}
+
+.hero-text .btn-inverse {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  inset: auto auto;
+  @media (min-width: layout.$media-min) {
+    font-size: 1.1rem;
+    padding-inline: 2rem !important;
+    padding-block: 0.8rem !important;
+  }
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  @media (min-width: layout.$media-min) {
+    margin: 0;
+    padding: 0;
+    margin-top: 3.5rem;
+    justify-content: flex-start;
+  }
+}
+
+.cta:hover > a {
+  cursor: pointer;
+  background-color: colors.$almost-white;
+  color: black;
+  border: 1px solid black;
+}
+
+.main-container {
+  display: grid;
+  @media (min-width: layout.$media-min) {
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding-left: 11.5vw;
+    padding-right: auto;
+    gap: 1.5vw;
+  }
+}
+
+.hero {
+  z-index: 2000;
+  @media (min-width: layout.$media-min) {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
+}
+
+.hero-image-desktop {
+  display: none;
+  @media (min-width: layout.$media-min) {
+    display: block;
+    background: url("/img/image-hero-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 3rem;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.client-link {
+  margin: 3rem 0;
+  padding: 0;
+  #databiz {
+    width: 5rem;
+  }
+  #audiophile {
+    width: 3rem;
+  }
+  #meet {
+    width: 4rem;
+  }
+  #maker {
+    width: 3.5rem;
+  }
+  li:hover {
+    cursor: pointer;
+  }
+  @media (min-width: layout.$media-min) {
+    margin: 0;
+    #databiz {
+      width: min(8vw, 7rem) !important;
+    }
+    #audiophile {
+      width: min(5.5vw, 4.5rem) !important;
+    }
+    #meet {
+      width: min(6.5vw, 5.5rem) !important;
+    }
+    #maker {
+      width: min(6vw, 5rem) !important;
+    }
+    justify-content: flex-start;
+    gap: min(3vw, 2.5rem);
+    line-height: 0;
+    margin-top: min(7vw, 6.5rem);
+    align-items: center;
+  }
+}
