@@ -33,7 +33,7 @@
 .mobile-nav-toggle {
   position: absolute;
   z-index: 9999;
-  background-image: url("../../img/icon-menu.svg");
+  background-image: url("../img/icon-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -49,7 +49,7 @@
 }
 
 .mobile-nav-toggle[aria-expanded="true"] {
-  background-image: url("../../img/icon-close-menu.svg");
+  background-image: url("../img/icon-close-menu.svg");
 }
 
 .backdrop {
@@ -115,7 +115,7 @@
 .dropdown-toggle {
   position: absolute;
   margin: 0.3rem 0 0 0.8rem;
-  background-image: url("../../img/icon-arrow-down.svg");
+  background-image: url("../img/icon-arrow-down.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -130,7 +130,7 @@
 
 li[aria-expanded="true"] {
   .dropdown-toggle {
-    background-image: url("../../img/icon-arrow-up-black.svg");
+    background-image: url("../img/icon-arrow-up-black.svg");
   }
   > a {
     color: black;
@@ -139,7 +139,7 @@ li[aria-expanded="true"] {
 
 li[aria-expanded="false"]:hover {
   > .dropdown-toggle {
-    background-image: url("../../img/icon-arrow-down-black.svg");
+    background-image: url("../img/icon-arrow-down-black.svg");
   }
 
   > a {
