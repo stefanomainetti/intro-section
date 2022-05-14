@@ -52,4 +52,30 @@ companyDropdownToggle.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
   primaryNav.classList.add("stop-transition");
+  document
+    .querySelector("#features-dropdown")
+    .setAttribute("data-visible", false);
+  featuresDropdownToggle.setAttribute("aria-expanded", false);
+  document
+    .querySelector("#company-dropdown")
+    .setAttribute("data-visible", false);
+  companyDropdownToggle.setAttribute("aria-expanded", false);
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    !(
+      companyDropdownToggle.contains(e.target) ||
+      featuresDropdownToggle.contains(e.target)
+    )
+  ) {
+    document
+      .querySelector("#features-dropdown")
+      .setAttribute("data-visible", false);
+    featuresDropdownToggle.setAttribute("aria-expanded", false);
+    document
+      .querySelector("#company-dropdown")
+      .setAttribute("data-visible", false);
+    companyDropdownToggle.setAttribute("aria-expanded", false);
+  }
 });
