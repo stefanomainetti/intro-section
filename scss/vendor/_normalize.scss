@@ -11,7 +11,7 @@
 @use "../abstracts/type";
 
 html {
-  @include type.font(type.$font-light);
+  @include type.font(type.$font-normal);
   line-height: 1.6; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }

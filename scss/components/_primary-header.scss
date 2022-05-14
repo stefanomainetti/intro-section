@@ -1,0 +1,242 @@
+@use "../abstracts/colors";
+@use "../layout/layout";
+
+.primary-header {
+  margin: 0;
+  width: 100%;
+  align-items: center;
+  @media (min-width: layout.$media-min) {
+    gap: 3rem;
+  }
+}
+
+.logo {
+  margin: 1rem;
+  display: flex;
+  align-items: baseline;
+  img {
+    padding-top: 0.5rem;
+  }
+  @media (min-width: layout.$media-min) {
+    margin-left: 2.5rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.nav-container {
+  @media (min-width: layout.$media-min) {
+    flex-grow: 1;
+    padding-top: 0.5rem;
+  }
+}
+
+.mobile-nav-toggle {
+  position: absolute;
+  z-index: 9999;
+  background-image: url("/img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  width: 2rem;
+  aspect-ratio: 1;
+  top: 1rem;
+  right: 1rem;
+  display: block;
+  @media (min-width: layout.$media-min) {
+    display: none;
+  }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url("/img/icon-close-menu.svg");
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 350ms, z-index 350ms;
+  @media (min-width: layout.$media-min) {
+    position: relative;
+    transition: none;
+  }
+}
+
+.backdrop[data-backdrop="true"] {
+  position: fixed;
+  z-index: 9000;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: hsl(0 0% 0% / 0.7);
+  @media (min-width: layout.$media-min) {
+    background-color: hsl(0 0% 0% / 0);
+    transition: none;
+  }
+}
+
+.primary-navigation {
+  z-index: 2000;
+  background-color: colors.$almost-white;
+  margin: 0;
+  transform: translateX(100%);
+  transition: transform 350ms ease-in-out;
+  position: fixed;
+  inset: 0 0 0 35%;
+  flex-direction: column;
+  padding: min(12vh, 5rem) 1.5em;
+  @media (min-width: layout.$media-min) {
+    padding: 0;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    transform: translateX(0%);
+    transition: none;
+    inset: 0 0 auto 0;
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.primary-navigation[data-visible="true"] {
+  transform: translateX(0%);
+}
+
+.dropdown-toggle {
+  position: absolute;
+  margin: 0.3rem 0 0 0.8rem;
+  background-image: url("/img/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  width: 1rem;
+  aspect-ratio: 1;
+  @media (min-width: layout.$media-min) {
+    position: relative;
+    margin: 0 0 0 0.2rem;
+  }
+}
+
+li[aria-expanded="true"] {
+  .dropdown-toggle {
+    background-image: url("/img/icon-arrow-up-black.svg");
+  }
+  > a {
+    color: black;
+  }
+}
+
+li[aria-expanded="false"]:hover {
+  > .dropdown-toggle {
+    background-image: url("/img/icon-arrow-down-black.svg");
+  }
+
+  > a {
+    color: black;
+  }
+}
+
+.nav-dropdown {
+  list-style: none;
+  flex-direction: column;
+  z-index: 3000 !important;
+  max-height: 0px;
+  overflow: hidden;
+  padding-inline: 1.5rem;
+  opacity: 0;
+  transition: max-height 350ms ease-in-out, padding 350ms ease-in-out,
+    opacity 350ms linear;
+  li {
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    a {
+      display: flex;
+      align-items: center;
+      img {
+        padding-right: 1rem;
+        width: 2.2rem;
+      }
+    }
+  }
+  @media (min-width: layout.$media-min) {
+    position: absolute;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 3rem hsl(0 0% 0% / 0.2);
+    inset: 3.5rem 0 auto auto;
+    padding-bottom: 1.2rem;
+    gap: 0.5rem;
+    li > a > img {
+      width: 2rem;
+    }
+  }
+}
+
+#company-dropdown {
+  @media (min-width: layout.$media-min) {
+    inset: 3.5rem -2rem auto 0;
+  }
+}
+
+.nav-dropdown[data-visible="true"] {
+  max-height: 30vh;
+  padding-top: 1.5rem;
+  opacity: 1;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+  }
+  li {
+    vertical-align: middle;
+  }
+  @media (min-width: layout.$media-min) {
+    flex-direction: row;
+    gap: 2.2rem;
+    li {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.sign-in {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 0;
+  font-size: 0.9rem;
+  flex-direction: column;
+  padding: min(9.5vh, 0.5rem) 0;
+  a {
+    text-decoration: none;
+    color: colors.$text-base;
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  @media (min-width: layout.$media-min) {
+    flex-direction: row;
+    gap: 1.3rem;
+    margin-right: 2.5rem;
+    a {
+      padding-inline: 1.2rem;
+    }
+  }
+}

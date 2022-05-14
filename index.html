@@ -7,21 +7,161 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="img/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/main.css" />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <script src="js/nav.js" defer></script>
   </head>
   <body>
-    Features Company Careers About Login Register Make remote work Get your team
-    in sync, no matter your location. Streamline processes, create team rituals,
-    and watch productivity soar. Learn more
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <!-- Header
+      ####################-->
+    <header class="primary-header flex">
+      <div class="logo"><img src="/img/logo.svg" alt="Snap logo" /></div>
+      <button
+        type="button"
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav class="nav-container">
+        <div id="backdrop" class="backdrop" data-backdrop="false">
+          <div
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <ul class="nav-list flex">
+              <li
+                id="features-dropdown-toggle"
+                aria-controls="features-dropdown"
+                aria-expanded="false"
+              >
+                <a href="#">Features</a>
+                <button type="button" class="dropdown-toggle">
+                  <span class="sr-only">Sub Menu</span>
+                </button>
+                <ul
+                  id="features-dropdown"
+                  data-visible="false"
+                  class="nav-dropdown flex"
+                >
+                  <li>
+                    <a href="#"
+                      ><img src="/img/icon-todo.svg" alt="icon todo" />Todo
+                      List</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="/img/icon-calendar.svg"
+                        alt="icon calendar"
+                      />Calendar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="/img/icon-reminders.svg"
+                        alt="icon reminders"
+                      />Reminders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="/img/icon-planning.svg" alt="" />Planning</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li
+                id="company-dropdown-toggle"
+                aria-controls="company-dropdown"
+                aria-expanded="false"
+              >
+                <a href="#">Company</a>
+                <button type="button" class="dropdown-toggle">
+                  <span class="sr-only">Sub Menu</span>
+                </button>
+                <ul
+                  id="company-dropdown"
+                  data-visible="false"
+                  class="nav-dropdown flex"
+                >
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+            <div class="sign-in flex">
+              <a href="#">Login</a>
+              <a href="#" class="btn-border">Register</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero section
+      #################### -->
+    <section class="hero">
+      <div class="main-container">
+        <div class="hero-image-mobile"></div>
+        <div class="hero-text">
+          <h1 class="title-large">Make <span>remote work</span></h1>
+          <p class="intro">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <div class="cta">
+            <a href="#" class="btn-inverse">Learn more</a>
+          </div>
+          <div class="client-container">
+            <ul class="unstyled-list client-link">
+              <li>
+                <a href="#"
+                  ><img
+                    id="databiz"
+                    src="/img/client-databiz.svg"
+                    alt="databiz"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    id="audiophile"
+                    src="/img/client-audiophile.svg"
+                    alt="audiophile"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img id="meet" src="/img/client-meet.svg" alt="meet"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img id="maker" src="/img/client-maker.svg" alt="maker"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-image-desktop"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Stefano Mainetti</a>.
+      </div>
+    </footer>
   </body>
 </html>
