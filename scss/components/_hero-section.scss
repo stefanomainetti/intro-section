@@ -5,7 +5,7 @@
   margin: 0;
   width: 100%;
   aspect-ratio: 1.33;
-  background: url("../../img/image-hero-mobile.png");
+  background: url("../img/image-hero-mobile.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -101,7 +101,7 @@
   display: none;
   @media (min-width: layout.$media-min) {
     display: block;
-    background: url("../../img/image-hero-desktop.png");
+    background: url("../img/image-hero-desktop.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 3rem;

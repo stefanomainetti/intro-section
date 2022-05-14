@@ -456,7 +456,7 @@ a:hover {
 .mobile-nav-toggle {
   position: absolute;
   z-index: 9999;
-  background-image: url("../../img/icon-menu.svg");
+  background-image: url("../img/icon-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -474,7 +474,7 @@ a:hover {
 }
 
 .mobile-nav-toggle[aria-expanded=true] {
-  background-image: url("../../img/icon-close-menu.svg");
+  background-image: url("../img/icon-close-menu.svg");
 }
 
 .backdrop {
@@ -546,7 +546,7 @@ a:hover {
 .dropdown-toggle {
   position: absolute;
   margin: 0.3rem 0 0 0.8rem;
-  background-image: url("../../img/icon-arrow-down.svg");
+  background-image: url("../img/icon-arrow-down.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -562,14 +562,14 @@ a:hover {
 }
 
 li[aria-expanded=true] .dropdown-toggle {
-  background-image: url("../../img/icon-arrow-up-black.svg");
+  background-image: url("../img/icon-arrow-up-black.svg");
 }
 li[aria-expanded=true] > a {
   color: black;
 }
 
 li[aria-expanded=false]:hover > .dropdown-toggle {
-  background-image: url("../../img/icon-arrow-down-black.svg");
+  background-image: url("../img/icon-arrow-down-black.svg");
 }
 li[aria-expanded=false]:hover > a {
   color: black;
@@ -678,7 +678,7 @@ li[aria-expanded=false]:hover > a {
   margin: 0;
   width: 100%;
   aspect-ratio: 1.33;
-  background: url("../../img/image-hero-mobile.png");
+  background: url("../img/image-hero-mobile.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -790,7 +790,7 @@ li[aria-expanded=false]:hover > a {
 @media (min-width: 55rem) {
   .hero-image-desktop {
     display: block;
-    background: url("../../img/image-hero-desktop.png");
+    background: url("../img/image-hero-desktop.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 3rem;
